@@ -1,0 +1,441 @@
+<html>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:200,300,400");
+html {
+  min-height: 100vh;
+  background: #030511;
+}
+
+body {
+  background-image: url("https://raw.githubusercontent.com/Trevor-Welch/Trevor-Welch.github.io/master/imgs/stop-button-background-2.png");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+}
+
+h1, p, h3 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-bar {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .header-bar {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+.header-bar .address {
+  font-weight: 200;
+  font-size: 20px;
+  text-align: right;
+}
+.header-bar .address p:first-of-type {
+  font-weight: 400;
+}
+@media only screen and (max-width: 768px) {
+  .header-bar .address {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .header-bar .address p:first-of-type {
+    margin: 4px 0;
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+}
+.header-bar .logo {
+  text-align: center;
+}
+.header-bar .logo .button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 20px;
+}
+.header-bar .logo .button .button-triangle {
+  border: 40px solid;
+  height: 0px;
+  width: 0px;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff rgba(0, 0, 0, 0);
+}
+.header-bar .logo .button .button-stop-button {
+  margin-left: -22px;
+  margin-right: -22px;
+  margin-bottom: 30px;
+  transition: 0.1s;
+}
+.header-bar .logo .button .button-stop-button .stop-button {
+  width: 60px;
+  height: 60px;
+  transform: rotate(45deg);
+  background: red;
+}
+.header-bar .logo .button:hover .button-stop-button {
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+.header-bar .logo .title {
+  font-size: 40px;
+  transition: 0.2s;
+}
+.header-bar .logo .subtitle {
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+.header-bar .logo .button:hover ~ .title {
+  text-shadow: 0 0 10px #FF0000;
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  border-top: 1px dotted rgba(255, 255, 255, 0.5);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  padding: 4px 0;
+  flex-wrap: wrap;
+}
+.nav-bar a {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-right: 20px;
+  transition: 0.2s;
+  padding: 8px;
+}
+.nav-bar a:hover {
+  color: #ff6464;
+}
+
+.banner-bar {
+  padding: 8px 0;
+  padding-bottom: 16px;
+  text-align: center;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+.banner-bar .banner-promo {
+  font-size: 32px;
+}
+.banner-bar .banner-promo .banner-only {
+  font-weight: 200;
+}
+.banner-bar .banner-promo .banner-price {
+  font-weight: 400;
+}
+.banner-bar .banner-sub {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.main-post {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+.main-post .post-text h3 {
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.main-post .post-text p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 28px;
+}
+.main-post .facebook-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  text-align: right;
+}
+.main-post .facebook-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.main-post .facebook-video {
+  width: 50%;
+  float: left;
+  padding-right: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .main-post .facebook-video {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+.info-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-sizing: border-box;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  padding: 20px 0;
+}
+.info-bar .info-section {
+  box-sizing: border-box;
+  width: 30%;
+}
+.info-bar .info-section a {
+  color: #ffc8c8;
+  transition: 0.2s;
+}
+.info-bar .info-section a:hover {
+  color: #ff6464;
+}
+.info-bar .info-section h3 {
+  font-weight: 300;
+  font-size: 18px;
+  border-bottom: 1px dotted red;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  line-height: 40px;
+}
+.info-bar .info-section img {
+  width: 100%;
+  height: auto;
+}
+.info-bar .info-section p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 28px;
+}
+@media only screen and (max-width: 768px) {
+  .info-bar {
+    flex-wrap: wrap;
+  }
+  .info-bar .info-section {
+    width: 100%;
+  }
+  .info-bar .info-section:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+}
+
+.upcoming-events {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  padding: 20px 0;
+}
+.upcoming-events .secondary-events {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+.upcoming-events .secondary-events .event {
+  width: 50%;
+}
+.upcoming-events .secondary-events .event:first-of-type {
+  margin-right: 1%;
+}
+@media only screen and (max-width: 768px) {
+  .upcoming-events .secondary-events {
+    flex-wrap: wrap;
+  }
+  .upcoming-events .secondary-events .event {
+    width: 100%;
+  }
+  .upcoming-events .secondary-events .event:first-of-type {
+    margin-right: 0;
+  }
+}
+.upcoming-events .event {
+  box-sizing: border-box;
+  margin: 8px 0;
+  background-size: cover;
+  overflow: hidden;
+}
+.upcoming-events .event .event-overlay {
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-height: 400px;
+  transition: 0.2s;
+}
+.upcoming-events .event .event-overlay .event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 84px;
+  margin-bottom: -84px;
+  transition: 0.2s;
+}
+.upcoming-events .event .event-overlay .event-details h1 {
+  text-align: right;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+.upcoming-events .event .event-overlay .event-details h3 {
+  font-weight: 200;
+  margin-right: 20px;
+}
+.upcoming-events .event .event-overlay .event-details .register-button {
+  cursor: pointer;
+  margin: 20px;
+  border: 2px #fff solid;
+  background: none;
+  color: white;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 16px 24px;
+  font-family: inherit;
+  transition: 0.2s;
+}
+.upcoming-events .event .event-overlay .event-details .register-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+@media only screen and (max-width: 768px) {
+  .upcoming-events .event .event-overlay {
+    min-height: 0px;
+  }
+}
+.upcoming-events .event:hover .event-overlay {
+  opacity: 1;
+}
+.upcoming-events .event:hover .event-overlay .event-details {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 200;
+  opacity: 0.7;
+  font-size: 14px;
+}
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+</style>
+<div class='container'>
+  <div class='header-bar'>
+    
+    <div class='logo'>
+    <div class='button'>
+      <div class='button-triangle'></div>
+      <div class='button-stop-button'>
+        <div class='stop-button'></div>
+      </div>
+      <div class='button-triangle'></div>
+    </div>
+    <h1 class='title'>Stop_Button</h1>
+    <p class='subtitle'>Bar and Arcade</p>
+  </div>
+  
+    <div class='address'>
+      <p>4251 Legion Rd #127, Hope Mills, NC 28348</p>
+      <p>Monday - Thursday : 3PM - 11PM</p>
+      <p>Friday : 3PM - 3AM</p>
+      <p>Saturday : 12PM - 3AM</p>
+      <p>Sunday : 1PM - 10PM</p>
+    </div>
+    
+  </div>
+  <div class='nav-bar'>
+    <a href="#">HOME</a>
+    <a href="#">ADMISSION</a>
+    <a href="#">DRINKS</a>
+    <a href="#">THE ARCADE</a>
+    <a href="#">TOURNAMENTS</a>
+    <a href="#">OUR STORY</a>
+    <a href="#">CONTACT</a>
+  </div>
+  <div class='banner-bar'>
+    <p class='banner-promo'> ALL DAY GAMING : <span class='banner-only'>Only $<span class='banner-price'>10</span>!</span </p>
+    <p class='banner-sub'>Sunday - Thursday : $7.00</p>
+    <p class='banner-sub'>Minors Under 18 : $5.00</p>
+  </div>
+  <div class='main-post'>
+  <div class='facebook-video'><div class='facebook-responsive'><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstopbuttonbar%2Fvideos%2F292420304547164%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" align="left"></iframe></div></div>
+    <div class='post-text'>
+      <h1>Welcome to Stop_Button</h1>
+      <h3>Fayetteville Area's Best Arcade</h3>
+      <p>We are the newest arcade and bar in Hope Mills and the surrounding area. We provide a wide selection of classic retro arcade games, modern console gaming, ESPORTS tournaments, bottled and draft beers, and handcrafted cocktails. Our entry fee is a one time, all day pass allowing you to come and go for a full day of fun.</p>
+    </div>
+  </div>
+  <div class='info-bar'>
+    <div class='info-section'>
+      <h3>RETRO AND MODERN GAMES</h3>
+      <a href="#"><img src='http://trevorjwelch.com/imgs/stopbutton-arcadecabinets.png'></a>
+      <p>From classics such as Galaga, Ms.PacMan, and Centipede to Tekken, Street Fighter, and ARMS, our arcade is constantly growing with new games to make your visit as fun as possible. For all our games, please <a href='#'>view our full list</a>.</p>
+    </div>
+    <div class='info-section'>
+      <h3>RAN BY VETERANS</h3>
+      <a href="#"><img src='http://trevorjwelch.com/imgs/stopbutton-opengames.png'></a>
+      <p>From military veterans to active duty, we offer military discounts to those who serve our country. To hear about how two army guys came together to create one of the best arcades in the area, read <a href='#'>our story</a>.</p>
+    </div>
+    <div class='info-section'>
+      <h3>SPECIALITY DRINKS</h3>
+      <a href="#"><img src='http://trevorjwelch.com/imgs/stopbutton-drinks.png'></a>
+      <p>To compliment the wide selection of games, we have a fully loaded bar with a variety of draft beers on top. Our bar also serves one-of-a-kind drinks such as the Cow King or the Hadouken. For a full list, please see our <a href='#'>drink menu</a>.</p>
+    </div>
+  </div>
+  <div class='upcoming-events'>
+    <h1>Upcoming Events</h1>
+    <div class='event' style="background-image: url(http://trevorjwelch.com/imgs/stopbutton-dragonball.jpg);">
+      <div class='event-overlay'>
+        <div class='event-details'>
+          <h1>The Cell Game 4 / Injustice 2</h1>
+          <h3>May 26th - 3:30 pm</h3>
+          <a href='#'><button class='register-button'>REGISTER</button></a>
+        </div>
+      </div>
+    </div>
+    <div class='secondary-events'>
+      <div class='event' style="background-image: url(http://trevorjwelch.com/imgs/stopbutton-trivianight.jpg);">
+      <div class='event-overlay'>
+        <div class='event-details'>
+          <h1>Royal Kings City Nights Part 3</h1>
+          <h3>May 30th - 8:00 pm</h3>
+          <a href='#'><button class='register-button'>REGISTER</button></a>
+        </div>
+      </div>
+    </div>
+    <div class='event' style="background-image: url(http://trevorjwelch.com/imgs/stopbutton-tekken7.jpg);">
+      <div class='event-overlay'>
+        <div class='event-details'>
+          <h1>Rocket Jam 2</h1>
+          <h3>June 15th - 3:00 pm</h3>
+          <a href='#'><button class='register-button'>REGISTER</button></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class='footer'>
+    <div class='rights'>
+      <p>© 2018 BY STOP_BUTTON LLC. DESIGNED BY <a href='#'>TREVOR WELCH</a>.</p>
+    </div>
+    <div class='social-media'>
+      
+    </div>
+  </div>
+  
+      
+</div>
+</html>
